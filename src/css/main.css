@@ -1,0 +1,2203 @@
+:root {
+  font-family: Stem, Avenir, Helvetica, Arial, sans-serif !important;
+  --el-font-family: Stem, Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  --elis-color-primary: #014637;
+  --elis-color-primary-ligth: #d6e9e6;
+  --elis-color-black: #000;
+  --elis-color-white: #fff;
+  --elis-color-grey: #586563;
+  --elis-color-grey-light: #e4e7ed;
+  --elis-box-shadow: 0px 0px 6px 0px var(--elis-color-grey);
+  --elis-box-shadow-inset: 0px 0px 2px 0px var(--elis-color-grey) inset;
+  --elis-box-shadow-dark: 0px 16px 48px 16px rgba(0, 0, 0, 0.08),
+    0px 12px 32px rgba(0, 0, 0, 0.12), 0px 8px 16px -8px rgba(0, 0, 0, 0.16);
+}
+
+.elis-widget-booking-drawer > * {
+  font-family: Stem, Avenir, Helvetica, Arial, sans-serif !important;
+  text-align: center;
+  font-weight: normal;
+  color: var(--elis-color-black);
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Кнопка закрытия виджета */
+
+.elis-widget-btn.elis-widget-btn-close {
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: inherit;
+  background-color: transparent;
+  outline: 0;
+  margin-left: auto;
+  padding: 0;
+}
+
+.elis-widget-btn.elis-widget-btn-close:hover,
+.elis-widget-btn.elis-widget-btn-close:focus,
+.elis-widget-btn.elis-widget-btn-close:focus-visible {
+  color: var(--elis-color-primary);
+  opacity: 0.8;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.elis-widget-btn.elis-widget-btn-close > span > i,
+.elis-widget-btn.elis-widget-btn-close > span > i > svg {
+  height: 30px;
+  width: 30px;
+}
+
+/* Общие настройки */
+
+.elis-text {
+  word-break: break-word;
+  text-align: left;
+}
+
+.elis-text-black {
+  color: var(--elis-color-black);
+}
+
+.elis-text-white {
+  color: var(--elis-color-white);
+}
+
+.elis-text-grey {
+  color: var(--elis-color-grey);
+}
+
+/* Стили кнопок */
+
+.elis-widget-btn {
+  color: var(--elis-color-primary);
+  border: 1px solid var(--elis-color-primary);
+}
+
+.elis-widget-btn:hover,
+.elis-widget-btn:focus,
+.elis-widget-btn:focus-visible {
+  color: var(--elis-color-primary);
+  opacity: 0.8;
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: var(--elis-box-shadow-inset);
+  background-color: transparent;
+  border: 1px solid var(--elis-color-primary);
+}
+
+.elis-widget-btn > span {
+  gap: 5px;
+}
+
+/* Кнопка primary */
+
+.elis-widget-btn.el-button--primary {
+  color: var(--elis-color-white);
+  background-color: var(--elis-color-primary);
+  border-color: var(--elis-color-primary);
+}
+
+.elis-widget-btn.el-button--primary:hover,
+.elis-widget-btn.el-button--primary:focus,
+.elis-widget-btn.el-button--primary:focus-visible {
+  color: var(--elis-color-white);
+  box-shadow: none;
+  outline: 0;
+  background-color: var(--elis-color-primary);
+  border-color: var(--elis-color-primary);
+  box-shadow: var(--elis-box-shadow);
+  opacity: 0.8;
+}
+
+/* Ссылки */
+
+.elis-link.el-link--primary {
+  font-weight: 300;
+  font-size: 12px;
+  border-bottom: 1px solid;
+  color: var(--el-text-color);
+}
+
+.elis-link.el-link--primary:hover,
+.elis-link.el-link--primary:focus,
+.elis-link.el-link--primary:focus-visible {
+  font-size: 12px;
+  color: var(--el-text-color);
+  font-weight: 400;
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: none;
+  --el-link-text-color: inherit;
+}
+
+/* Поле ввода */
+
+.elis-input > .el-input-group__append:hover,
+.elis-input > .el-input-group__append:focus,
+.elis-input > .el-input-group__append:focus-visible,
+.elis-input > .el-input__wrapper:hover,
+.elis-input > .el-input__wrapper:focus,
+.elis-input > .el-input__wrapper:focus-visible,
+.elis-input > .el-input__wrapper.is-focus:hover,
+.elis-input > .el-input__wrapper.is-focus:focus,
+.elis-input > .el-input__wrapper.is-focus:focus-visible {
+  color: var(--elis-color-white) !important;
+  box-shadow: none !important;
+  border: none;
+  outline: 0;
+}
+
+.elis-input > .el-input__wrapper.is-focus {
+  box-shadow: none;
+}
+
+.elis-input > .el-input__wrapper,
+.elis-input > .el-input-group__append {
+  border: none;
+  box-shadow: none;
+}
+.elis-input > .el-input__wrapper > .el-input__inner {
+  font-size: 16px;
+}
+
+/* Кнопка справа в поле ввода */
+
+.elis-input > .el-input-group__append {
+  padding: 2px;
+  background-color: transparent;
+}
+
+/* Ошибка */
+
+.step-form-item.is-error.step-contact__item:hover,
+.step-form-item.is-error.step-contact__item:focus,
+.step-form-item.is-error.step-contact__item:focus-visible {
+  outline: 0;
+}
+
+.step-form-item.is-error .el-input__wrapper.is-focus,
+.step-form-item.is-error .el-input__wrapper {
+  box-shadow: none !important;
+}
+
+.elis-widget-scrollbar {
+  overflow: visible;
+}
+
+.elis-widget-scrollbar {
+  --el-scrollbar-bg-color: var(--elis-color-primary);
+  --el-scrollbar-hover-opacity: 0.5;
+  --el-scrollbar-hover-bg-color: var(--elis-color-primary);
+}
+
+/* Табы */
+
+.elis-tabs > .el-tabs__header > .el-tabs__nav-wrap > .el-tabs__nav-prev,
+.elis-tabs > .el-tabs__header > .el-tabs__nav-wrap > .el-tabs__nav-next {
+  display: none;
+}
+
+.dealer-btn-group > .el-loading-mask > .el-loading-spinner {
+  top: 2%;
+}
+
+.path,
+.elis-widget-scrollbar > .el-loading-mask > .el-loading-spinner .path,
+.elis-widget-step-container > .el-loading-mask > .el-loading-spinner .path,
+.step-auto-form-container > .el-loading-mask > .el-loading-spinner .path,
+.step-contact > .step-form-item > .el-loading-mask > .el-loading-spinner .path,
+.dealer-btn-group > .el-loading-mask > .el-loading-spinner .path,
+.image-loader.el-loading-spinner .path {
+  stroke: var(--elis-color-primary);
+}
+
+/* Шапка виджета */
+
+.elis-widget-booking-drawer > .el-drawer__header {
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  margin-bottom: 0;
+}
+
+.elis-widget-header__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.elis-widget-header__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--elis-color-black);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  text-align: center !important;
+}
+
+.elis-widget-header__subtitle {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center !important;
+  color: var(--elis-color-black);
+}
+
+.elis-widget-header__description {
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center !important;
+  word-break: break-word;
+  color: var(--elis-color-black);
+}
+
+.elis-widget-header__subtitle,
+.elis-widget-header__description {
+  margin-bottom: 10px;
+  margin-right: 40px;
+}
+
+/* Иконка закрытия виджета */
+
+.elis-widget-booking-drawer > .el-drawer__header > .el-drawer__close-btn {
+  margin-left: auto;
+  padding: 0;
+}
+
+.elis-widget-booking-drawer
+  > .el-drawer__header
+  > .el-drawer__close-btn
+  > .el-icon.el-drawer__close,
+.elis-widget-booking-drawer
+  > .el-drawer__header
+  > .el-drawer__close-btn
+  > .el-icon.el-drawer__close
+  > svg {
+  height: 30px;
+  width: 30px;
+}
+
+.elis-widget-booking-drawer
+  > .el-drawer__header
+  > .el-drawer__close-btn:hover
+  i {
+  color: var(--elis-color-black);
+  opacity: 0.8;
+}
+
+/* Информация о пройденных шагах и процентах: верхняя панель  */
+
+.elis-widget-step-status {
+  position: sticky;
+  background-color: var(--elis-color-white);
+  z-index: 1000;
+}
+
+.elis-widget-step-status {
+  top: 0;
+  padding-bottom: 10px;
+}
+
+.elis-widget-step-status,
+.elis-widget-step-container {
+  margin-right: 40px;
+}
+
+/* Информация о пройденных шагах и процентах: боковая панель  */
+
+.steps-info {
+  margin-left: 20px;
+  padding: 0;
+}
+
+.steps-info__item {
+  padding-bottom: 0;
+}
+
+.steps-info__item > .el-timeline-item__wrapper {
+  padding-left: 20px;
+}
+
+.steps-info > .el-timeline-item > .el-timeline-item__tail {
+  left: 3px;
+  border-left: 2px solid;
+  border-image: linear-gradient(
+      0deg,
+      var(--elis-color-white),
+      var(--elis-color-black)
+    )
+    1;
+}
+
+.steps-info__item > .el-timeline-item__wrapper > .el-timeline-item__content {
+  min-height: 46px;
+}
+
+.steps-info > .step-active > .el-timeline-item__tail {
+  border-image: none;
+}
+
+.step-descriptions > .el-descriptions__header {
+  margin-bottom: 5px;
+}
+
+.step-descriptions > .el-descriptions__header > .el-descriptions__title {
+  text-align: left;
+  font-size: 13px;
+}
+
+.step-descriptions
+  > .el-descriptions__body
+  > .el-descriptions__table
+  > tbody
+  > tr {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-descriptions
+  > .el-descriptions__body
+  .el-descriptions__table
+  .el-descriptions__cell,
+.dealer-phone-descriptions {
+  font-size: 10px;
+  line-height: normal;
+  word-break: break-word;
+}
+
+.dealer-phone-descriptions.elis-link.el-link--primary {
+  margin: 0;
+}
+
+.step-descriptions
+  > .el-descriptions__body
+  .el-descriptions__table:not(.is-bordered)
+  .el-descriptions__cell {
+  padding-bottom: 8px;
+}
+
+/* Кружок пройденного шага */
+
+.steps-info__item > .el-timeline-item__node--normal {
+  background-color: var(--elis-color-black) !important;
+  width: 10px;
+  height: 10px;
+}
+
+/* Текст информации пройденных шагов */
+.step-descriptions
+  > .el-descriptions__body
+  > .el-descriptions__table
+  > tbody
+  > tr
+  > .el-descriptions__cell
+  > .el-descriptions__content,
+.dealer-phone-descriptions {
+  color: var(--elis-color-black);
+}
+
+/* Тело виджета с элементами формы */
+
+.elis-widget-step-container {
+  margin-top: 12px;
+}
+
+.elis-widget-booking-drawer > .el-drawer__body {
+  padding: 20px 0 0 40px;
+}
+
+.elis-widget-step-title {
+  font-size: 18px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--elis-color-black);
+  align-self: flex-start;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+/* Шаг 1. Информация об автомобиле */
+
+.step-auto,
+.step-auto > .el-tabs__header,
+.step-auto > .el-tabs__content {
+  max-width: 340px;
+  width: 100%;
+}
+
+/* Табы */
+
+.step-auto > .el-tabs__header {
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.step-auto > .el-tabs__header,
+.step-auto > .el-tabs__header .el-tabs__nav,
+.step-auto > .el-tabs__header .el-tabs__item {
+  border: none !important;
+}
+
+.step-auto > .el-tabs__header > .el-tabs__item:hover .el-tabs__item:focus {
+  color: var(--elis-color-black);
+  opacity: 0.7;
+}
+
+.step-auto > .el-tabs__header .el-tabs__item {
+  padding: 0 5px !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.step-auto > .el-tabs__header .el-tabs__item:first-child {
+  padding: 0 5px 0 0 !important;
+}
+
+.step-auto > .el-tabs__header .el-tabs__item:hover,
+.step-auto > .el-tabs__header .el-tabs__item:focus,
+.step-auto > .el-tabs__header .el-tabs__item.is-active {
+  color: var(--elis-color-black);
+  opacity: 1;
+}
+
+.step-auto > .el-tabs__header .el-tabs__item.is-disabled {
+  color: var(--elis-color-black) !important;
+  opacity: 1;
+  cursor: default !important;
+}
+
+.step-auto
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__item {
+  margin-bottom: 0;
+  height: auto;
+}
+
+/* Поле ввода */
+
+.step-auto__input {
+  border: 1px solid var(--elis-color-black);
+  color: var(--elis-color-black);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.step-auto__input:hover,
+.step-auto__input:focus,
+.step-auto__input:focus-visible {
+  border: 1px solid var(--elis-color-black);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.step-auto__input > .el-input__wrapper > .el-input__inner {
+  text-transform: uppercase;
+}
+
+.step-auto__input > .el-input__wrapper > .el-input__inner::placeholder {
+  text-transform: none;
+}
+
+.step-form-item > .el-form-item__content > .el-form-item__error {
+  position: relative;
+  top: 0;
+  font-weight: 300;
+  text-align: left;
+}
+
+/* Кнопка поиска по VIN или регистрационный номеру */
+
+.step-auto__input-arrow-next {
+  font-size: 20px !important;
+  padding: 5px 10px !important;
+  margin: 0 !important;
+  color: var(--elis-color-white) !important;
+  background-color: var(--elis-color-primary) !important;
+  border-color: var(--elis-color-primary) !important;
+}
+
+/* Кнопка открытия подсказки о VIN-номере */
+
+.step-auto__vin-tooltip-btn-info {
+  height: auto;
+  float: left;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--elis-color-black) !important;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.step-auto__vin-tooltip-btn-info:hover,
+.step-auto__vin-tooltip-btn-info:focus,
+.step-auto__vin-tooltip-btn-info:focus-visible {
+  border: none;
+  font-weight: 400;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Всплывающая подсказка о VIN-номере */
+.step-auto__vin-tooltip {
+  width: 400px;
+  padding: 6px 12px;
+  background-color: var(--elis-color-white);
+  color: var(--elis-color-black);
+  font-weight: 300;
+  border: 1px solid var(--elis-color-primary);
+  box-shadow: var(--elis-box-shadow);
+}
+
+.step-auto__vin-tooltip > .el-popper__arrow::before {
+  background-color: var(--elis-color-white);
+  border: 1px solid var(--elis-color-primary);
+}
+
+/* Окно "Это Ваш автомобиль?" */
+
+.vin-info__step-title {
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.vin-info__title {
+  color: var(--elis-color-black);
+  font-size: 18px;
+}
+
+.vin-info__description {
+  color: var(--elis-color-black);
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.vin-info__footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Шаг 2. Сервисные работы */
+
+.step-service__item {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+/* Панель кнопок выбора сервисных работ */
+.step-service__service-work {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.step-service__service-work > .checkbox-button > .el-checkbox-button__inner,
+.step-service__service-work
+  > .el-checkbox-button:first-child
+  .el-checkbox-button__inner {
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--elis-color-primary);
+  color: var(--elis-color-primary);
+  outline: 0;
+  offset: 0;
+}
+
+.step-service__service-work
+  > .checkbox-button
+  > .el-checkbox-button__inner:hover,
+.step-service__service-work
+  > .el-checkbox-button:first-child
+  .el-checkbox-button__inner:hover,
+.step-service__service-work
+  > .checkbox-button
+  > .el-checkbox-button__inner:focus,
+.step-service__service-work
+  > .el-checkbox-button:first-child
+  .el-checkbox-button__inner:focus,
+.step-service__service-work
+  > .checkbox-button
+  > .el-checkbox-button__inner:focus-visible,
+.step-service__service-work
+  > .el-checkbox-button:first-child
+  .el-checkbox-button__inner:focus-visible,
+.slot:hover,
+.slot:focus,
+.slot:focus-visible {
+  border-color: inherit;
+  background-color: inherit;
+  opacity: 0.8;
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: 0px 0px 6px 0px var(--elis-color-grey) !important;
+}
+
+.step-service__service-work > .el-checkbox-button {
+  --el-checkbox-button-checked-bg-color: var(--elis-color-primary);
+  --el-checkbox-button-checked-text-color: var(--elis-color-white);
+  --el-checkbox-button-checked-border-color: var(--elis-color-primary);
+  outline: 0;
+  offset: 0;
+}
+
+.step-service__service-work
+  > .is-checked.el-checkbox-button:first-child
+  > .el-checkbox-button__inner {
+  color: var(--elis-color-white);
+  border-left-color: var(--elis-color-primary);
+}
+
+.step-service__service-work > .is-checked.checkbox-button {
+  border-left-color: var(--elis-color-primary);
+}
+
+.step-service__service-work > .el-checkbox-button.is-checked,
+.step-service__service-work
+  > .el-checkbox-button.is-checked
+  > .el-checkbox-button__inner {
+  border-color: var(--elis-color-primary);
+  border-radius: 4px;
+  color: var(--elis-color-white);
+}
+
+.step-service__service-work
+  > .is-checked.checkbox-button
+  > .el-checkbox-button__inner:hover,
+.step-service__service-work
+  > .is-checked.checkbox-button
+  > .el-checkbox-button__inner:focus,
+.step-service__service-work
+  > .is-checked.checkbox-button
+  > .el-checkbox-button__inner:focus-visible {
+  color: var(--elis-color-white);
+  box-shadow: none;
+  outline: 0;
+  background-color: var(--elis-color-primary);
+  border-color: var(--elis-color-primary);
+  box-shadow: var(--elis-box-shadow);
+  opacity: 0.7;
+}
+
+/* Поле ввода комментария */
+
+.step-service__comment > .el-textarea__inner,
+.step-contact__input > .el-input__wrapper > .el-input__inner,
+.seach-dealer > .el-input__wrapper > .el-input__inner {
+  box-shadow: none;
+  border-bottom: 1px solid var(--elis-color-primary);
+  border-radius: 0;
+  padding: 8px 0 16px;
+  font-weight: 300;
+  word-break: break-word;
+  color: var(--elis-color-black);
+}
+
+/* Шаг 3. Выбрать дилера */
+
+.step-dealer-container {
+  text-align: left;
+}
+
+.step-dealer__tabs > .el-tabs__header {
+  margin-bottom: 10px;
+  border-bottom: none;
+  height: auto;
+}
+
+.step-dealer__tabs > .el-tabs__header > .el-tabs__nav-wrap {
+  line-height: normal;
+  font-size: 14px;
+}
+
+.step-dealer__tabs
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav {
+  border: none;
+  border-bottom: 2px solid var(--el-border-color-light) !important;
+}
+
+.step-dealer__tabs
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__item {
+  height: auto;
+  border: none;
+  padding: 0;
+  padding-right: 5px;
+}
+
+.step-dealer__tabs
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__item.is-active {
+  border-bottom: 2px solid var(--elis-color-primary) !important;
+  margin-bottom: -1px;
+  color: var(--elis-color-black);
+}
+
+.step-dealer__tabs
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__item.is-disabled {
+  color: var(--elis-color-grey);
+}
+
+/* Выбор города */
+.elis-select-city > .el-input > .el-input-group__append:hover,
+.elis-select-city > .el-input > .el-input-group__append:focus,
+.elis-select-city > .el-input > .el-input-group__append:focus-visible,
+.elis-select-city > .el-input > .el-input__wrapper:hover,
+.elis-select-city > .el-input > .el-input__wrapper:focus,
+.elis-select-city > .el-input > .el-input__wrapper:focus-visible,
+.elis-select-city > .el-input.is-focus .el-input__wrapper,
+.elis-select-city > .el-input.is-focus .el-input__wrapper:hover,
+.elis-select-city > .el-input.is-focus .el-input__wrapper:focus,
+.elis-select-city > .el-input.is-focus .el-input__wrapper:focus-visible,
+.elis-select-city > .el-input > .el-input__wrapper.is-focus,
+.elis-select-city > .el-input > .el-input__wrapper.is-focus:hover,
+.elis-select-city > .el-input > .el-input__wrapper.is-focus:focus,
+.elis-select-city > .el-input > .el-input__wrapper.is-focus:focus-visible {
+  color: var(--elis-color-white) !important;
+  box-shadow: var(--elis-box-shadow-inset) !important;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.elis-select-city-popper
+  > .el-cascader-panel
+  > .el-cascader-menu
+  > .el-scrollbar__wrap
+  > .el-cascader-menu__list
+  > .el-cascader-node.in-active-path,
+.elis-select-city-popper
+  > .el-cascader-panel
+  > .el-cascader-menu
+  > .el-scrollbar__wrap
+  > .el-cascader-menu__list
+  > .el-cascader-node.is-active,
+.elis-select-city-popper
+  > .el-cascader-panel
+  > .el-cascader-menu
+  > .el-scrollbar__wrap
+  > .el-cascader-menu__list
+  > .el-cascader-node.is-selectable.in-checked-path {
+  color: var(--elis-color-primary);
+}
+
+.elis-select-city-popper
+  > .el-cascader-panel
+  > .el-cascader-menu
+  > .el-scrollbar__wrap
+  > .el-cascader-menu__list
+  > .el-cascader-node:not(.is-disabled):focus,
+.elis-select-city-popper
+  > .el-cascader-panel
+  > .el-cascader-menu
+  > .el-scrollbar__wrap
+  > .el-cascader-menu__list
+  > .el-cascader-node:not(.is-disabled):hover {
+  background-color: var(--elis-color-primary-ligth);
+  opacity: 0.7;
+  color: var(--elis-color-primary);
+  font-weight: 600;
+}
+
+/* скрываем радио-кнопку - выбор региона  */
+/* .elis-select-city-popper >
+.el-cascader-panel >
+.el-cascader-menu >
+.el-scrollbar__wrap >
+.el-cascader-menu__list >
+.el-cascader-node > .el-radio {
+  display: none;
+} */
+
+/* стиль выбранного региона */
+/* .elis-select-city-popper >
+.el-cascader-panel >
+.el-cascader-menu >
+.el-scrollbar__wrap >
+.el-cascader-menu__list >
+.el-cascader-node.is-selectable.in-checked-path,
+.elis-select-city-popper >
+.el-cascader-panel >
+.el-cascader-menu >
+.el-scrollbar__wrap >
+.el-cascader-menu__list >
+.el-cascader-node.is-selectable.in-checked-path {
+  background-color: var(--elis-color-primary-ligth);
+} */
+
+/* Поле поиска */
+
+.seach-dealer > .el-input__wrapper {
+  padding: 0;
+  font-size: 14px;
+}
+
+.seach-dealer > .el-input__wrapper > .el-input__inner {
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+/* Контейнер строки с информацией о дилере */
+
+.dealer-btn-group {
+  padding: 5px 0;
+}
+
+.dealer-container {
+  width: 100%;
+  margin: 10px 0;
+  cursor: default;
+}
+
+.dealer-title {
+  margin-block: 0;
+  margin-inline: 0;
+  width: 100%;
+  text-transform: uppercase;
+  line-height: normal;
+  margin-bottom: 10px;
+  color: var(--elis-color-black);
+}
+
+.dealer-subtitle {
+  width: 100%;
+  margin-block: 0;
+  margin-inline: 0;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: normal;
+  color: var(--elis-color-black);
+}
+
+.dealer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.dealer-phone {
+  width: auto !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.dealer-link {
+  line-height: normal;
+  font-size: 12px;
+  color: var(--elis-color-black);
+}
+
+.dealer-link:hover,
+.dealer-link:focus,
+.dealer-link:focus-visible {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.descriptions-link,
+.descriptions-link:hover,
+.descriptions-link:focus,
+.descriptions-link:focus-visible {
+  font-size: 10px !important;
+}
+
+.dealer-btn-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  line-height: normal;
+}
+
+.dealer-btn {
+  box-sizing: border-box;
+  line-height: normal;
+  border-radius: 4px;
+}
+
+.dealer-btn > .el-radio-button__inner {
+  background-color: var(--elis-color-white);
+  color: var(--elis-color-primary);
+  border: 1px solid var(--elis-color-primary) !important;
+  font-size: 13px;
+  padding: 6px 12px;
+}
+
+.is-active.dealer-btn > .el-radio-button__inner {
+  background-color: var(--elis-color-primary);
+  color: var(--elis-color-white);
+}
+
+/* Заглушка: Ничего не найдено */
+
+.dealer-plug {
+  margin-top: 10px;
+  font-weight: 300;
+  line-height: normal;
+  color: var(--elis-color-black);
+}
+
+/* Пагинация */
+
+.dealer-pagination {
+  margin-top: 10px;
+}
+
+.dealer-pagination.is-background .el-pager .number,
+.dealer-pagination.is-background .el-pager .more.el-icon,
+.dealer-pagination.is-background .btn-prev,
+.dealer-pagination.is-background .btn-next {
+  background-color: var(--elis-color-primary-ligth);
+  color: var(--elis-color-primary);
+}
+
+.dealer-pagination.is-background .el-pager li.is-active {
+  background-color: var(--elis-color-primary);
+  color: var(--elis-color-white);
+}
+
+.dealer-pagination.is-background .el-pager .number:hover,
+.dealer-pagination.is-background .el-pager .number:focus,
+.dealer-pagination.is-background .el-pager .number:focus-visible,
+.dealer-pagination.is-background .el-pager .more.el-icon:hover,
+.dealer-pagination.is-background .el-pager .more.el-icon:focus,
+.dealer-pagination.is-background .el-pager .more.el-icon:focus-visible,
+.dealer-pagination.is-background .btn-prev:hover,
+.dealer-pagination.is-background .btn-prev:focus,
+.dealer-pagination.is-background .btn-prev:focus-visible,
+.dealer-pagination.is-background .btn-next:hover,
+.dealer-pagination.is-background .btn-next:focus,
+.dealer-pagination.is-background .btn-next:focus-visible {
+  background-color: var(--elis-color-primary);
+  color: var(--elis-color-white);
+  opacity: 0.7;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.dealer-pagination.is-background .btn-prev:disabled,
+.dealer-pagination.is-background .btn-next:disabled {
+  background-color: var(--elis-color-primary-ligth);
+  color: var(--elis-color-primary);
+  opacity: 0.5;
+}
+
+/* Шаг 4. Контактные данные */
+
+.step-contact__item {
+  margin-bottom: 0;
+}
+
+.step-contact__label {
+  display: none;
+}
+
+.step-contact__input > .el-input__wrapper {
+  padding: 10px 0 0;
+}
+
+.step-contact__input:hover,
+.step-contact__input:focus,
+.step-contact__input:focus-visible,
+.seach-dealer:hover,
+.seach-dealer:focus,
+.seach-dealer:focus-visible {
+  border: none;
+  outline: 0;
+}
+
+/* Выбор даты */
+
+.step-contact__calendar:hover,
+.step-contact__calendar:focus,
+.step-contact__calendar:focus-visible {
+  outline: 0;
+  offset: 0;
+}
+
+/* .step-contact__calendar::placeholder {
+  font-size: 13px;
+} */
+
+.step-contact__date > .el-form-item__content,
+.checkbox-agreement > .el-form-item__content {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-contact__date > .el-date-picker {
+  font-family: Stem, Avenir, Helvetica, Arial, sans-serif;
+  --el-font-family: Stem, Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.step-contact__calendar > .el-date-picker,
+.step-contact__calendar > .el-date-picker .el-picker-panel__content {
+  width: 220px;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header {
+  margin: 12px 3px 0;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__prev-btn
+  > .el-picker-panel__icon-btn,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__next-btn
+  > .el-picker-panel__icon-btn {
+  padding: 3px;
+  margin-top: 5px;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__header-label {
+  font-size: 15px;
+}
+
+.step-contact__calendar > .el-input__wrapper,
+.step-contact__calendar > .el-input__wrapper:hover,
+.step-contact__calendar > .el-input__wrapper:focus,
+.step-contact__calendar > .el-input__wrapper:focus-visible,
+.step-contact__date
+  > .el-form-item__content
+  > .el-input
+  > .el-input__wrapper.is-focus,
+.step-contact__date
+  > .el-form-item__content
+  > .el-input
+  > .el-input__wrapper.is-focus:hover,
+.step-contact__date
+  > .el-form-item__content
+  > .el-input
+  > .el-input__wrapper.is-focus:focus,
+.step-contact__date
+  > .el-form-item__content
+  > .el-input
+  > .el-input__wrapper.is-focus:focus-visible {
+  outline: 0;
+  offset: 0;
+  box-shadow: var(--elis-box-shadow);
+  border: none;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__prev-btn
+  > .el-picker-panel__icon-btn:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__prev-btn
+  > .el-picker-panel__icon-btn:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__prev-btn
+  > .el-picker-panel__icon-btn:focus-visible,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__header-label:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__header-label:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__header-label:focus-visible,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__next-btn
+  > .el-picker-panel__icon-btn:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__next-btn
+  > .el-picker-panel__icon-btn:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__next-btn
+  > .el-picker-panel__icon-btn:focus-visible {
+  color: var(--elis-color-primary);
+  font-weight: 500;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__prev-btn
+  > .el-picker-panel__icon-btn:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__prev-btn
+  > .el-picker-panel__icon-btn:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__prev-btn
+  > .el-picker-panel__icon-btn:focus-visible,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__next-btn
+  > .el-picker-panel__icon-btn:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__next-btn
+  > .el-picker-panel__icon-btn:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-date-picker__header
+  > .el-date-picker__next-btn
+  > .el-picker-panel__icon-btn:focus-visible {
+  font-size: 13px;
+}
+
+.step-contact__date > .el-form-item__content > .el-date-editor.el-input {
+  border-radius: 4px;
+  border: 1px solid var(--elis-color-primary);
+}
+
+.step-contact__date
+  > .el-form-item__content
+  > .el-date-editor
+  > .el-input__wrapper
+  > .el-input__inner {
+  color: var(--elis-color-black);
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td
+  .el-date-table-cell,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td
+  > div
+  > .cell,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-year-table
+  > tbody
+  > tr
+  > td
+  > .cell {
+  color: var(--elis-color-primary);
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td {
+  padding: 0;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-year-table
+  > tbody
+  > tr
+  > td {
+  padding: 6px 0;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td
+  > div
+  > .cell,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td
+  > div
+  > .cell:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td
+  > div
+  > .cell:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td
+  > div
+  > .cell:focus-visible {
+  width: 50px;
+  height: 34px;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.today
+  .el-date-table-cell__text,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  > tbody
+  > tr
+  > td.today
+  > div
+  > .cell,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-year-table
+  > tbody
+  > tr
+  > td.today
+  > .cell {
+  font-weight: 800;
+  color: var(--elis-color-primary);
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.today.current
+  .el-date-table-cell__text,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td.today.current
+  > div
+  > .cell,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-year-table
+  > tbody
+  > tr
+  > td.today.current
+  > .cell {
+  color: var(--elis-color-white);
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td
+  .el-date-table-cell__text:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td
+  .el-date-table-cell__text:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td
+  .el-date-table-cell__text:focus-visible {
+  font-weight: 800;
+  border: 1px solid var(--elis-color-primary);
+  border-radius: 50%;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td:not(.disabled)
+  > div
+  > .cell:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-year-table
+  > tbody
+  > tr
+  > td:not(.disabled)
+  > .cell:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td:not(.disabled)
+  > div
+  > .cell:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-year-table
+  > tbody
+  > tr
+  > td:not(.disabled)
+  > .cell:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td:not(.disabled)
+  > div
+  > .cell:focus-visible,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-year-table
+  > tbody
+  > tr
+  > td:not(.disabled)
+  > .cell:focus-visible {
+  font-weight: 800;
+  border: 1px solid var(--elis-color-primary);
+  outline: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.current:not(.disabled)
+  .el-date-table-cell__text,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td.current
+  > div
+  > .cell,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-year-table
+  > tbody
+  > tr
+  > td.current
+  > .cell {
+  background-color: var(--elis-color-primary);
+  color: var(--elis-color-white);
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td
+  .el-date-table-cell:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td
+  .el-date-table-cell:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td
+  .el-date-table-cell:focus-visible {
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.disabled
+  .el-date-table-cell,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-month-table
+  td.disabled
+  > div
+  > .cell,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-year-table
+  > tbody
+  > tr
+  > td.disabled
+  > .cell {
+  background-color: var(--elis-color-primary-ligth);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.disabled
+  .el-date-table-cell__text:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.disabled
+  .el-date-table-cell__text:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.disabled
+  .el-date-table-cell__text:focus-visible,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.disabled
+  .el-date-table-cell:hover,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.disabled
+  .el-date-table-cell:focus,
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content
+  > .el-date-table
+  > tbody
+  > tr
+  > td.disabled
+  .el-date-table-cell:focus-visible {
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  font-weight: 400;
+}
+
+.step-contact__calendar
+  > .el-date-picker
+  > .el-picker-panel__body-wrapper
+  > .el-picker-panel__body
+  > .el-picker-panel__content {
+  margin: 0;
+}
+
+/* Слоты времени */
+
+.elis-title-time {
+  margin-top: 0;
+}
+
+.tabs-time {
+  min-width: 268px;
+  width: 100%;
+}
+
+.tabs-time > .el-tabs__header > .el-tabs__nav-wrap {
+  padding: 0;
+}
+
+.tabs-time
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav {
+  column-gap: 13px;
+}
+
+.tabs-time
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__item {
+  font-size: 14px;
+  height: 20px;
+  padding: 0;
+}
+
+.tabs-time
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__item:hover,
+.tabs-time
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__item:focus,
+.tabs-time
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__item:focus-visible {
+  color: var(--elis-color-primary);
+  font-weight: 600;
+  box-shadow: none;
+  opacity: 0.8;
+}
+
+.tabs-time
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__active-bar {
+  background-color: var(--elis-color-primary);
+}
+
+.tabs-time
+  > .el-tabs__header
+  > .el-tabs__nav-wrap
+  > .el-tabs__nav-scroll
+  > .el-tabs__nav
+  > .el-tabs__item.is-active {
+  color: var(--elis-color-primary);
+}
+
+.tab-slots {
+  gap: 5px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.slot {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 20%;
+  width: calc(25% - 6px);
+  border: 1px solid var(--elis-color-primary);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.slot:disabled,
+.slot > .el-radio-button__original-radio:disabled + .el-radio-button__inner {
+  opacity: 0.5;
+  color: var(--elis-color-primary);
+}
+
+.slot:hover,
+.slot:focus,
+.slot:focus-visible,
+.dealer-btn:hover,
+.dealer-btn:focus,
+.dealer-btn:focus-visible {
+  border-color: inherit;
+  background-color: inherit;
+  opacity: 0.8;
+  outline: 0;
+  outline-offset: 0;
+  box-shadow: 0px 0px 3px 0px var(--elis-color-grey);
+}
+
+.slot.is-active
+  > .el-radio-button__original-radio:checked
+  + .el-radio-button__inner {
+  background-color: var(--elis-color-primary);
+  box-shadow: none;
+}
+
+.slot > .el-radio-button__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  color: var(--elis-color-primary);
+  padding: 5px 0;
+}
+
+.checkbox-agreement {
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+.checkbox-agreement
+  > .el-form-item__content
+  > .el-checkbox
+  > .el-checkbox__input
+  .el-checkbox__inner {
+  border-color: var(--elis-color-primary);
+}
+
+.checkbox-agreement
+  > .el-form-item__content
+  > .el-checkbox.is-checked
+  > .el-checkbox__input.is-checked
+  .el-checkbox__inner {
+  background-color: var(--elis-color-primary);
+  border-color: var(--elis-color-primary);
+}
+
+.checkbox-agreement
+  > .el-form-item__content
+  > .el-checkbox
+  > .el-checkbox__input
+  .el-checkbox__inner:hover,
+.checkbox-agreement
+  > .el-form-item__content
+  > .el-checkbox
+  > .el-checkbox__input
+  .el-checkbox__inner:focus,
+.checkbox-agreement
+  > .el-form-item__content
+  > .el-checkbox
+  > .el-checkbox__input
+  .el-checkbox__inner:focus-visible {
+  border-color: var(--elis-color-primary);
+  outline: 0;
+  box-shadow: 0px 0px 3px 0px var(--elis-color-grey);
+  opacity: 0.8;
+}
+
+.checkbox-agreement
+  > .el-form-item__content
+  > .el-checkbox
+  > .el-checkbox__label {
+  font-weight: 300;
+}
+
+.elis-widget-footer {
+  padding: 0 20px;
+  text-align: left;
+}
+
+/* Завершающее сообщение: Ваша заявка принята */
+
+.elis-finish-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.elis-text-success {
+  align-self: flex-start;
+}
+
+@media (max-width: 1600px) {
+  .elis-widget-booking-drawer {
+    min-width: 560px;
+  }
+}
+
+@media (max-width: 840px) {
+  .elis-widget-booking-drawer {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dealer-container {
+    margin: 7px 0;
+  }
+
+  .dealer-btn-container {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .elis-widget-booking-drawer > .el-drawer__header {
+    padding: 0 10px 0;
+  }
+
+  .elis-widget-booking-drawer > .el-drawer__body {
+    padding: 10px 0 0 20px;
+  }
+
+  .elis-widget-booking-drawer
+    > .el-drawer__header
+    > .el-drawer__close-btn
+    > .el-icon.el-drawer__close
+    > svg {
+    height: 25px;
+    width: 25px;
+  }
+
+  .elis-widget-header__container {
+    width: 100%;
+    margin-top: 5px;
+    padding: 0 10px;
+    gap: 7px;
+  }
+
+  .elis-widget-header__title {
+    font-size: 18px;
+  }
+
+  .elis-widget-header__subtitle {
+    font-size: 13px;
+  }
+
+  .elis-widget-header__description {
+    font-size: 11px;
+  }
+
+  .elis-widget-header__subtitle,
+  .elis-widget-header__description {
+    margin-right: 20px;
+  }
+
+  .elis-widget-step-status,
+  .elis-widget-step-container {
+    margin-right: 20px;
+  }
+
+  .elis-current-step {
+    font-size: 13px;
+  }
+
+  .elis-widget-step-container {
+    margin-top: 7px;
+    gap: 7px;
+  }
+
+  .step-auto > .el-tabs__header {
+    margin-bottom: 15px;
+  }
+
+  .step-auto > .el-tabs__header > .el-tabs__nav-wrap {
+    padding: 0;
+  }
+
+  .step-auto
+    > .el-tabs__header
+    > .el-tabs__nav-wrap
+    > .el-tabs__nav-scroll
+    > .el-tabs__nav
+    > .el-tabs__item,
+  .elis-widget-step-title {
+    font-size: 15px;
+  }
+
+  .step-auto__item {
+    margin-bottom: 15px;
+  }
+
+  .step-auto__input > .el-input__wrapper > .el-input__inner {
+    height: 25px;
+  }
+
+  .step-auto__input-arrow-next {
+    font-size: 16px !important;
+    padding: 4px 7px !important;
+    height: 25px;
+  }
+
+  .elis-widget-btn {
+    font-size: 12px;
+    height: 25px;
+    padding: 5px 10px;
+  }
+
+  .step-form-item > .el-form-item__content > .el-form-item__error {
+    font-size: 11px;
+  }
+
+  .step-auto__vin-tooltip-btn-info {
+    font-size: 13px;
+    padding: 0;
+    height: auto;
+  }
+
+  .step-auto__vin-tooltip {
+    width: calc(100% - 65px);
+  }
+
+  .step-auto__vin-tooltip > .el-text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .step-service__item {
+    margin-bottom: 10px;
+  }
+
+  .step-service__service-work > .checkbox-button > .el-checkbox-button__inner,
+  .step-service__service-work
+    > .el-checkbox-button:first-child
+    .el-checkbox-button__inner {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+
+  .step-service__comment > .el-textarea__inner,
+  .step-contact__input > .el-input__wrapper > .el-input__inner {
+    font-size: 12px;
+  }
+
+  .step-service__comment > .el-input__count {
+    font-size: 10px;
+    line-height: 11px;
+    right: 0;
+  }
+
+  .steps-info__item > .el-timeline-item__wrapper > .el-timeline-item__content {
+    min-height: 36px;
+  }
+
+  .steps-info__item > .el-timeline-item__wrapper {
+    padding-left: 15px;
+  }
+
+  .step-descriptions > .el-descriptions__header > .el-descriptions__title {
+    font-size: 12px;
+  }
+
+  .step-descriptions
+    > .el-descriptions__body
+    .el-descriptions__table:not(.is-bordered)
+    .el-descriptions__cell {
+    padding-bottom: 5px;
+  }
+
+  .dealer-phone-descriptions.elis-link.el-link--primary,
+  .step-descriptions
+    > .el-descriptions__body
+    .el-descriptions__table
+    .el-descriptions__cell {
+    font-size: 9px;
+  }
+
+  .step-dealer__item {
+    margin-bottom: 10px;
+  }
+
+  .step-dealer__item > .el-form-item__content {
+    min-width: 180px;
+    width: 100%;
+  }
+
+  .seach-dealer > .el-input__wrapper > .el-input__inner {
+    font-size: 13px;
+  }
+
+  .dealer-pagination .btn-next .el-icon,
+  .dealer-pagination .btn-prev .el-icon {
+    font-size: 10px;
+  }
+
+  .dealer-pagination.is-background .el-pager .number,
+  .dealer-pagination.is-background .el-pager .more.el-icon,
+  .dealer-pagination.is-background .btn-prev,
+  .dealer-pagination.is-background .btn-next {
+    font-size: 10px;
+    min-width: 19px;
+    line-height: 20px;
+    margin: 0 2px;
+  }
+
+  .checkbox-agreement__label {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  .step-contact__input > .el-input__wrapper {
+    padding: 5px 0 0;
+  }
+
+  .step-contact__input > .el-input__wrapper > .el-input__inner {
+    padding: 8px 0;
+  }
+
+  .elis-widget-step-title {
+    margin: 15px 0 10px;
+    line-height: normal;
+  }
+
+  .step-contact__date {
+    margin: 15px 0 0;
+  }
+
+  .tabs-time {
+    min-width: 180px;
+  }
+
+  .tabs-time > .el-tabs__header {
+    margin: 0 0 10px;
+  }
+
+  .slot > .el-radio-button__inner {
+    font-size: 12px;
+  }
+
+  .elis-text-success {
+    font-size: 13px;
+  }
+
+  .elis-widget-footer {
+    padding: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .tabs-time > .el-tabs__header > .el-tabs__nav-wrap::after {
+    display: none;
+  }
+
+  .tabs-time
+    > .el-tabs__header
+    > .el-tabs__nav-wrap
+    > .el-tabs__nav-scroll
+    > .el-tabs__nav {
+    flex-wrap: wrap;
+    column-gap: 15px;
+    row-gap: 5px;
+  }
+
+  .tabs-time
+    > .el-tabs__header
+    > .el-tabs__nav-wrap
+    > .el-tabs__nav-scroll
+    > .el-tabs__nav
+    > .el-tabs__active-bar {
+    display: none;
+  }
+
+  .tabs-time
+    > .el-tabs__header
+    > .el-tabs__nav-wrap
+    > .el-tabs__nav-scroll
+    > .el-tabs__nav
+    > .el-tabs__item {
+    font-size: 13px;
+    border-bottom: 1px solid var(--elis-color-grey-light);
+  }
+
+  .tabs-time
+    > .el-tabs__header
+    > .el-tabs__nav-wrap
+    > .el-tabs__nav-scroll
+    > .el-tabs__nav
+    > .el-tabs__item.is-active {
+    border-bottom: 2px solid var(--elis-color-primary);
+  }
+}
+
+@media (max-width: 470px) {
+  .el-col-12.dealer-col {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--elis-color-black);
+    background-color: var(--elis-color-white);
+  }
+}

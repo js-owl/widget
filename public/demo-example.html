@@ -1,0 +1,67 @@
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Записаться на сервис</title>
+</head>
+
+<body>
+  <div class="main-div">
+    <div style="position: absolute; top: 50%; left: calc(50% - 90px)">
+      <button id="elis_widget_iframe">Онлайн запись на сервис</button>
+    </div>
+    <script>
+      ; (function (d, w) {
+        const id = w.elis_widget_booking_dealer_id || 24
+        w.elis_widget_booking_dealer_step = 3
+        const step = 3
+        const js = d.createElement('script')
+        js.type = 'module'
+        js.async = true
+        js.src = `https://v2.elis.uaz.ru/widgetbooking/widget-loader.js?id=${id}&step=${step}`
+        d.getElementsByTagName('head')[0].appendChild(js)
+      })(document, window)
+    </script>
+  </div>
+</body>
+<style>
+  .main-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #elis_widget_iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    height: 32px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 0;
+    transition: 0.1s;
+    font-weight: 500;
+    user-select: none;
+    vertical-align: middle;
+    background-color: #014637;
+    border: 1px solid #014637;
+    border-color: #014637;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  #elis_widget_iframe:hover {
+    opacity: 0.7;
+  }
+</style>
+
+</html>
